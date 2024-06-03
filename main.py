@@ -1,4 +1,4 @@
-def session():
+def main():
   session = {}
   session['distance'] = int(input("Add distance\n"))
   session['time'] = input("Add time taken\n")
@@ -9,8 +9,14 @@ def session():
     split = input(f"Add split for mile {i}\n")
     session['splits'].append(split)
   
-  print(f"distance is {session['distance']} and time is {session['time']}")
-  print(session)
+  return session
+
+
+def miles_to_km(distance):
+  return float(distance * 1.6)
+
+
+def km_to_miles(distance):
+  return float(distance * 0.621371)
   
-  
-session()
+main()
